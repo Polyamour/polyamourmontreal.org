@@ -1,26 +1,40 @@
 ---
 ---
 
+$accent1: hsl(280, 50%, 40%)
+
 body
   font-family: sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   margin: 0
+  font-size: 0.9em
 
   &:before
     content: ""
     display: block
-    background: hsl(280, 50%, 40%)
+    background: $accent1
     height: 1em
 
 a
   text-decoration: none
   color: hsl(220, 50%, 50%)
 
+p
+  line-height: 1.3
+  margin: 0.5em 0 1em
+  color: #333
+
+h2
+  font-weight: normal
+  margin: 1em 0 0.4em
+  color: adjust-color($accent1, $saturation: -20%, $lightness: +10%)
+
 .title
   font-weight: 300
   font-size: 3.0em
   color: hsl(280, 20%, 45%)
+  margin: 1em 0 1.8em
 
 .actions
   margin: 1em 0
@@ -45,7 +59,10 @@ body > .main
   max-width: 40em
   margin: auto
   padding: 2em 0
-  text-align: center
 
-.external
-  margin-top: 2em
+  .title, .external
+    text-align: center
+
+section.external
+  margin: 3em 0 2em
+  font-size: 0.9em
