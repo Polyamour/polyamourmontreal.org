@@ -66,12 +66,20 @@ body > .main
   margin: auto
   padding: 2em 1em
 
-  .title, .external
+  .title
     text-align: center
 
-section.external
-  margin: 3em 0 2em
+footer
+  text-align: center
+  margin: 4em 0 0
   font-size: 0.9em
+
+  .social.media
+    font-size: 1rem
+
+  .signature
+    color: #555
+    margin: 2em 0 0
 
 .officieres
   +breakpoint($small-up)
@@ -97,3 +105,19 @@ section.external
     font-size: 0.9em
     color: #888
 
+footer .icons
+  margin-bottom: 0.3em
+
+  i.infinite:before
+    content: "\221e"
+    color: hsl(212, 72%, 50%)
+    font-family: sans-serif
+    font-weight: bold
+    font-size: 22px
+    top: 4px
+    position: relative
+    font-style: normal
+
+  .fa-heart
+    font-size: 0.9em
+    color: hsl(355, 59%, 55%)
