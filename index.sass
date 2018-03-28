@@ -3,6 +3,12 @@
 
 $accent1: hsl(280, 50%, 40%)
 
+$small-up: "(min-width: 480px)"
+
+=breakpoint($size)
+  @media #{$size}
+    @content
+
 body
   font-family: sans-serif
   -webkit-font-smoothing: antialiased
@@ -58,7 +64,7 @@ h2
 body > .main
   max-width: 40em
   margin: auto
-  padding: 2em 0
+  padding: 2em 1em
 
   .title, .external
     text-align: center
@@ -66,3 +72,28 @@ body > .main
 section.external
   margin: 3em 0 2em
   font-size: 0.9em
+
+.officieres
+  +breakpoint($small-up)
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 0.4em
+
+  .officiere
+    padding: 0.5em 0
+
+    > *
+      display: block
+
+  .name
+    margin-bottom: 0.2em
+
+    &.vacant
+      color: #666
+      font-style: italic
+      font-size: 0.95em
+
+  .position
+    font-size: 0.9em
+    color: #888
+
