@@ -16,12 +16,6 @@ body
   margin: 0
   font-size: 0.9em
 
-  &:before
-    content: ""
-    display: block
-    background: $accent1
-    height: 1em
-
 a
   text-decoration: none
   color: hsl(220, 50%, 50%)
@@ -39,7 +33,22 @@ h1
 h2
   color: adjust-color($accent1, $saturation: -20%, $lightness: +10%)
 
-.title
+body > header
+  display: block
+  background: $accent1
+  height: 0.6em
+
+  color: white
+
+  .content
+    max-width: 50em
+    margin: auto
+
+  a
+    color: white
+    // &:hover
+
+main .title
   font-weight: 300
   font-size: 3.0em
   color: hsl(280, 20%, 45%)
